@@ -1,0 +1,20 @@
+import { CommonService } from './../common.service';
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-github-followers',
+  templateUrl: './github-followers.component.html',
+  styleUrls: ['./github-followers.component.css']
+})
+export class GithubFollowersComponent implements OnInit {
+
+  constructor(private _service:CommonService) { }
+  followersData;
+  ngOnInit(): void {
+    this._service.getFollowers().subscribe((res:any)=>{
+      this.followersData= res;
+      console.log(this.followersData)
+    })
+  }
+
+}

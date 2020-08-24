@@ -1,0 +1,9 @@
+<div class="media mb-4" *ngFor="let data of followersData">
+    <img class="mr-3 rounded" src="{{data.flag}}" alt="Generic placeholder image" width="100px" height="100px">
+    <div class="media-body">
+      <h5 class="mt-0">
+          <a [routerLink]="['/followers',data.area,data.capital]">{{data.name}}</a>
+      </h5>
+      <a href="data.flag">{{data.flag}}</a>
+    </div>
+  </div>

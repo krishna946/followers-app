@@ -1,0 +1,12 @@
+<span class="d-flex">
+    <input type="text" class="form-control" #title>
+    <button class="btn btn-sm btn-primary" (click)="createPost(title)">Create</button>
+</span>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let data of posts">
+        {{data.title}}
+        
+        <button class="btn btn-default btn-sm btn-primary" (click)="updatePost(data)">Update</button>
+        <button class="btn btn-danger btn-sm" (click)=delPost(data)>deletePost</button>
+    </li>
+</ul>
